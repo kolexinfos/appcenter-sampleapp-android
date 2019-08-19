@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        AppCenter.start(getApplication(), "5f39ede0-33c9-42bc-84ac-09632cf6875f",
+                  Analytics.class, Crashes.class);
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
